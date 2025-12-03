@@ -13,7 +13,7 @@ from langgraph.graph import StateGraph, START, END
 
 load_dotenv()
 
-DEFAULT_MODEL = "gemini-2.5-flash-preview-05-20"
+DEFAULT_MODEL = "gemini-2.5-flash"
 
 llm = ChatGoogleGenerativeAI(model=DEFAULT_MODEL)
 
