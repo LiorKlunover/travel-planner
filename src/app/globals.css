@@ -24,3 +24,14 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Force input text to be black */
+input,
+textarea,
+select {
+  color: #000000 !important;
+}
+
+input::placeholder {
+  color: #6b7280 !important;
+}

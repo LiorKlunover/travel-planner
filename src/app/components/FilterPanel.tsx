@@ -39,7 +39,8 @@ export default function FilterPanel({ onPlanTrip }: FilterPanelProps) {
             value={destination}
             onChange={(e) => setDestination(e.target.value)}
             placeholder="Where would you like to go?"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
+            style={{ color: '#000000' }}
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-black placeholder-gray-500"
           />
         </div>
 
@@ -57,7 +58,8 @@ export default function FilterPanel({ onPlanTrip }: FilterPanelProps) {
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
                 min={new Date().toISOString().split('T')[0]}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900"
+                style={{ color: '#000000' }}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-black"
               />
             </div>
             <div className="space-y-2">
@@ -70,7 +72,8 @@ export default function FilterPanel({ onPlanTrip }: FilterPanelProps) {
                 value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
                 min={startDate || new Date().toISOString().split('T')[0]}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900"
+                style={{ color: '#000000' }}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-black"
               />
             </div>
           </div>
@@ -81,11 +84,10 @@ export default function FilterPanel({ onPlanTrip }: FilterPanelProps) {
           <button
             onClick={handlePlanTrip}
             disabled={!isFormValid}
-            className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-200 transform ${
-              isFormValid
-                ? 'bg-blue-600 hover:bg-blue-700 text-white hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl'
-                : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-            }`}
+            className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-200 transform ${isFormValid
+              ? 'bg-blue-600 hover:bg-blue-700 text-white hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl'
+              : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+              }`}
           >
             Plan Trip
           </button>
